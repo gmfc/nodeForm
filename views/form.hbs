@@ -1,0 +1,12 @@
+<form action="/form/send/{{form.id}}" method="post">
+  {{#each form.elementos}}
+    {{> (lookup . 'fragment')}}
+  {{/each}}
+  <input type="submit" value="Submit">
+</form>
+
+<script type="text/javascript">
+  function updateVal(from,to) {
+    document.getElementById(to).value = document.getElementById(from).value;
+  }
+</script>
